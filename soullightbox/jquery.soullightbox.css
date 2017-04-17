@@ -1,0 +1,58 @@
+/*!
+ * SoulLightbox Jquery Plugin v1.0.0
+ *
+ * Copyright 2016, Christopher Díaz Pantoja http://christopher.mx
+ * Released under the MIT license
+ * http://jquery.org/license
+ *
+ * Date: 2016-11-23T15:27Z
+ */
+ 
+#soullightbox{
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+}
+
+a#soullightbox-close-btn{
+    background-image: url(icon-close-white.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    display: block;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transition: all .2s ease-in-out;
+    width: 24px;
+}
+
+a#soullightbox-close-btn span{
+    display: none;
+}
+
+a#soullightbox-close-btn:hover{
+    transform: rotate(80deg);
+    transition: all .2s ease-in-out;
+}
+
+#soullightbox-wrapper{
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+html.soullightbox,
+body.soullightbox{
+    height: 100%;
+    overflow-y: hidden;
+}

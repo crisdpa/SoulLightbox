@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>SoulLightbox - Ejemplos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="soullightbox/jquery.soullightbox.css">
+        <style>
+            body{
+                background-color: #ededed;
+                font-family: 'Helvetica', sans-serif;
+                font-size: 16px;
+            }
+            .thumbnail{
+                border: 1px solid #ededed;
+                height: auto;
+                width: 300px;
+            }
+            a.video{
+                position: relative;
+            }
+            a.video::after{
+                bottom: 0
+                color: #fff;
+                content: '►';
+                display: inline-block;
+                left: 0;
+                font-size: 40px;
+                margin: auto;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .html-container{
+                background-color: #fff;
+                padding: 40px;
+                width: 400px;
+            }
+            .code{
+                background-color: #ededed;
+                box-sizing: border-box;
+                font-size: 12px;
+                margin: 20px 0 40px 0;
+                padding: 20px;
+                text-align: left;
+                white-space: pre-line;
+            }
+            h1{
+                font-size: 40px;
+            }
+            h2{
+                font-size: 25px;
+                color: #E44D26;
+            }
+            main{
+                background-color: #fff;
+                border: 2px solid #ccc;
+                box-sizing: border-box;
+                margin: 20px auto;
+                padding: 40px;
+                text-align: center;
+                width: 800px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>SoulLightbox - Ejemplos</h1>
+
+            <h2>Imagen</h2>
+            <a href="https://assets-cdn.github.com/images/modules/open_graph/github-octocat.png" class="soullightbox" data-media="picture"><img src="https://assets-cdn.github.com/images/modules/open_graph/github-octocat.png" class="thumbnail" alt="thumbnail" /></a>
+            <pre class="code">
+                &#x3C;a href=&#x22;__PICTURE_TO_OPEN__&#x22; class=&#x22;soullightbox&#x22; data-media=&#x22;picture&#x22;&#x3E;&#x3C;img src=&#x22;...&#x22; class=&#x22;thumbnail&#x22; alt=&#x22;thumbnail&#x22; /&#x3E;&#x3C;/a&#x3E;
+            </pre>
+
+            <h2>Video de Youtube</h2>
+            <a href="#" class="soullightbox" data-media="video" data-video-id="w3jLJU7DT5E"><img src="http://img.youtube.com/vi/w3jLJU7DT5E/mqdefault.jpg" class="thumbnail" alt="thumbnail" /></a>
+            <pre class="code">
+                &#x3C;a href=&#x22;#&#x22; class=&#x22;soullightbox&#x22; data-media=&#x22;video&#x22; data-video-id=&#x22;__YOUTUBE_ID__&#x22;&#x3E;&#x3C;img src=&#x22;...&#x22; class=&#x22;thumbnail&#x22; alt=&#x22;thumbnail&#x22; /&#x3E;&#x3C;/a&#x3E;
+            </pre>
+
+            <h2>Contenedor HTML</h2>
+            <a href="#" class="soullightbox" data-media="html" data-element-id="html-container">Abrir contenedor de HTML</a>
+            <pre class="code">
+                &#x3C;a href=&#x22;#&#x22; class=&#x22;soullightbox&#x22; data-media=&#x22;html&#x22; data-element-id=&#x22;__DOM_ELEMENT_ID__&#x22;&#x3E;Abrir contenedor de HTML&#x3C;/a&#x3E;
+            </pre>
+            <div id="html-container" class="html-container" style="display: none;">
+                <h2>Contenedor HTML</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse semper, lacus sit amet malesuada ornare, turpis urna euismod lectus, ut luctus nulla diam eget dolor. Duis vel est non urna ultrices gravida. Vivamus elementum tellus in erat eleifend malesuada. Maecenas ante mi, accumsan in nulla nec, posuere suscipit velit. Sed eros arcu, facilisis ac rutrum vitae, maximus in ipsum. Etiam pharetra egestas sagittis. Nullam enim sapien, dictum sed posuere viverra, convallis eget lorem. Quisque libero justo, cursus a congue at, finibus a augue. In feugiat, leo id mattis dignissim, nisl libero cursus dui, eu aliquet nulla diam vel elit. Praesent iaculis, erat eget porttitor malesuada, mi lectus sagittis velit, ac tincidunt dolor quam non urna. Maecenas volutpat mattis enim, at suscipit nunc ultricies id.</p>
+            </div>
+        </main>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="soullightbox/jquery.soullightbox.min.js"></script>
+        <script>
+            $('.soullightbox').soullightbox();
+        </script>
+    </body>
+</html>
